@@ -1,1 +1,5 @@
 node_modules
+Build
+parser-win.exe
+parser-macos
+parser-linux
