@@ -1,0 +1,561 @@
+{
+	"aberdeen":{
+		"company":{
+			"nbfc":{},
+			"stokes":{},
+			"tree_et":{}
+		}
+	},
+	"amsterdam":{
+		"company":{
+			"kaarfor":{},
+			"lkwlog":{},
+			"stokes":{},
+			"trameri":{}
+		}
+	},
+	"berlin":{
+		"company":{
+			"bcp": {},
+			"euroacres": {},
+			"eurogoodies": {},
+			"nbfc": {},
+			"sanbuilders": {}
+		}
+	},
+	"bern":{
+		"company":{
+			"euroacres": {},
+			"eurogoodies": {},
+			"kaarfor": {}
+		}
+	},
+	"birmingham":{
+		"company":{
+			"bcp": {},
+			"posped": {},
+			"sanbuilders":{},
+			"tree_et": {}
+		}
+	},
+	"bratislava":{
+		"company":{
+			"bcp": {},
+			"posped": {},
+			"tree_et": {},
+			"wgcc": {}
+		}
+	},
+	"bremen":{
+		"company":{
+			"euroacres": {},
+			"eurogoodies": {},
+			"fcp": {},
+			"posped": {}
+		}
+	},
+	"brno":{
+		"company":{
+			"euroacres": {},
+			"lkwlog": {},
+			"sanbuilders": {},
+			"trameri": {}
+		}
+	},
+	"brussel":{
+		"company":{
+			"euroacres": {},
+			"fcp": {},
+			"transinet": {}
+		}
+	},
+	"calais":{
+		"company":{
+			"lkwlog": {},
+			"nbfc": {},
+			"stokes": {}
+		}
+	},
+	"cambridge":{
+		"company":{
+			"euroacres": {},
+			"kaarfor": {},
+			"transinet": {}
+		}
+	},
+	"cardiff":{
+		"company":{
+			"eurogoodies": {},
+			"quarry": {},
+			"stokes": {}
+		}
+	},
+	"carlisle":{
+		"company":{
+			"euroacres": {},
+			"posped": {},
+			"trameri": {}
+		}
+	},
+	"dijon":{
+		"company":{
+			"euroacres": {},
+			"eurogoodies": {},
+			"stokes": {}
+		}
+	},
+	"dortmund":{
+		"company":{
+			"kaarfor": {},
+			"quarry": {},
+			"transinet": {},
+			"tree_et": {}
+		}
+	},
+	"dover":{
+		"company":{
+			"euroacres": {},
+			"eurogoodies": {},
+			"lkwlog": {}
+		}
+	},
+	"dresden":{
+		"company":{
+			"euroacres": {},
+			"sellplan": {},
+			"trameri": {},
+			"transinet": {}
+		}
+	},
+	"duisburg":{
+		"company":{
+			"lkwlog": {},
+			"nbfc": {}
+		}
+	},
+	"dusseldorf":{
+		"company":{
+			"eurogoodies": {},
+			"fcp": {},
+			"stokes": {}
+		}
+	},
+	"edinburgh":{
+		"company":{
+			"eurogoodies": {},
+			"kaarfor": {},
+			"sanbuilders": {}
+		}
+	},
+	"erfurt":{
+		"company":{
+			"euroacres": {},
+			"eurogoodies": {},
+			"sanbuilders": {}
+		}
+	},
+	"felixstowe":{
+		"company":{
+			"lkwlog": {},
+			"tradeaux": {},
+			"tree_et": {}
+		}
+	},
+	"frankfurt":{
+		"company":{
+			"kaarfor": {},
+			"tradeaux": {},
+			"tree_et": {},
+			"wgcc": {}
+		}
+	},
+	"geneve":{
+		"company":{
+			"posped": {},
+			"sellplan": {},
+			"tradeaux": {},
+			"tree_et": {}
+		}
+	},
+	"glasgow":{
+		"company":{
+			"eurogoodies": {},
+			"itcc": {},
+			"quarry": {},
+			"wgcc": {}
+		}
+	},
+	"graz":{
+		"company":{
+			"fcp": {},
+			"lkwlog": {},
+			"posped": {},
+			"tree_et": {}
+		}
+	},
+	"grimsby":{
+		"company":{
+			"eurogoodies": {},
+			"tradeaux": {},
+			"wgcc": {}
+		}
+	},
+	"groningen":{
+		"company":{
+			"euroacres": {},
+			"eurogoodies": {},
+			"sellplan": {}
+		}
+	},
+	"hamburg":{
+		"company":{
+			"lkwlog": {},
+			"sanbuilders": {},
+			"transinet": {}
+		}
+	},
+	"hannover":{
+		"company":{
+			"quarry": {},
+			"scania_dlr": {},
+			"tradeaux": {},
+			"trameri": {},
+			"tree_et": {}
+		}
+	},
+	"innsbruck":{
+		"company":{
+			"eurogoodies": {},
+			"trameri": {},
+			"tree_et": {}
+		}
+	},
+	"kassel":{
+		"company":{
+			"bcp": {},
+			"tradeaux": {}
+		}
+	},
+	"kiel":{
+		"company":{
+			"eurogoodies": {},
+			"posped": {},
+			"stokes": {}
+		}
+	},
+	"klagenfurt":{
+		"company":{
+			"eurogoodies": {},
+			"sellplan": {},
+			"tradeaux": {},
+			"trameri": {}
+		}
+	},
+	"koln":{
+		"company":{
+			"itcc": {},
+			"posped": {}
+		}
+	},
+	"leipzig":{
+		"company":{
+			"eurogoodies": {},
+			"fcp": {},
+			"tree_et": {}
+		}
+	},
+	"liege":{
+		"company":{
+			"eurogoodies": {},
+			"itcc": {},
+			"stokes": {},
+			"tree_et": {}
+		}
+	},
+	"lille":{
+		"company":{
+			"eurogoodies": {},
+			"tradeaux": {},
+			"trameri": {}
+		}
+	},
+	"linz":{
+		"company":{
+			"itcc": {},
+			"nbfc": {},
+			"posped": {}
+		}
+	},
+	"liverpool":{
+		"company":{
+			"euroacres": {},
+			"eurogoodies": {},
+			"nbfc": {},
+			"trameri": {}
+		}
+	},
+	"london":{
+		"company":{
+			"nbfc": {},
+			"posped": {},
+			"sanbuilders": {},
+			"sellplan": {},
+			"volvo_dlr": {}
+		}
+	},
+	"luxembourg":{
+		"company":{
+			"itcc": {},
+			"lkwlog": {},
+			"sanbuilders": {},
+			"volvo_dlr": {}
+		}
+	},
+	"lyon":{
+		"company":{
+			"kaarfor": {},
+			"quarry": {},
+			"sanbuilders": {},
+			"tradeaux": {},
+			"trameri": {}
+		}
+	},
+	"magdeburg":{
+		"company":{
+			"euroacres": {},
+			"eurogoodies": {},
+			"sellplan": {}
+		}
+	},
+	"manchester":{
+		"company":{
+			"fcp": {},
+			"lkwlog": {},
+			"scania_dlr": {},
+			"tree_et": {},
+			"wgcc": {}
+		}
+	},
+	"mannheim":{
+		"company":{
+			"eurogoodies": {},
+			"trameri": {},
+			"transinet": {}
+		}
+	},
+	"metz":{
+		"company":{
+			"eurogoodies": {},
+			"posped": {},
+			"tree_et": {}
+		}
+	},
+	"milano":{
+		"company":{
+			"aci": {},
+			"cargotras": {},
+			"cesare_smar": {},
+			"ika_bohag": {},
+			"libellula": {},
+			"spinelli": {},
+			"tesore_gust": {}
+		}
+	},
+	"munchen":{
+		"company":{
+			"bcp": {},
+			"eurogoodies": {},
+			"kaarfor": {},
+			"wgcc": {}
+		}
+	},
+	"newcastle":{
+		"company":{
+			"eurogoodies": {},
+			"sanbuilders": {},
+			"sellplan": {}
+		}
+	},
+	"nurnberg":{
+		"company":{
+			"euroacres": {},
+			"sanbuilders": {},
+			"stokes": {},
+			"trameri": {}
+		}
+	},
+	"osnabruck":{
+		"company":{
+			"euroacres": {},
+			"eurogoodies": {},
+			"sellplan": {},
+			"transinet": {}
+		}
+	},
+	"paris":{
+		"company":{
+			"batisse_hs": {},
+			"bhv": {},
+			"fle": {},
+			"ika_bohag": {},
+			"lisette_log": {},
+			"tradeaux": {},
+			"voitureux": {}
+		}
+	},
+	"plymouth":{
+		"company":{
+			"euroacres": {},
+			"eurogoodies": {},
+			"stokes": {},
+			"trameri": {}
+		}
+	},
+	"poznan":{
+		"company":{
+			"fcp": {},
+			"kaarfor": {},
+			"stokes": {},
+			"tree_et": {}
+		}
+	},
+	"prague":{
+		"company":{
+			"eurogoodies": {},
+			"quarry": {},
+			"sellplan": {},
+			"skoda": {},
+			"tradeaux": {}
+		}
+	},
+	"reims":{
+		"company":{
+			"euroacres": {},
+			"eurogoodies": {},
+			"kaarfor": {},
+			"quarry": {}
+		}
+	},
+	"rostock":{
+		"company":{
+			"itcc": {},
+			"sellplan": {},
+			"tradeaux": {}
+		}
+	},
+	"rotterdam":{
+		"company":{
+			"posped": {},
+			"sanbuilders": {},
+			"transinet": {},
+			"wgcc": {}
+		}
+	},
+	"salzburg":{
+		"company":{
+			"euroacres": {},
+			"eurogoodies": {},
+			"quarry": {},
+			"sanbuilders": {},
+			"transinet": {}
+		}
+	},
+	"sheffield":{
+		"company":{
+			"itcc": {},
+			"quarry": {},
+			"sellplan": {},
+			"transinet": {}
+		}
+	},
+	"southampton":{
+		"company":{
+			"sellplan": {},
+			"transinet": {},
+			"tree_et": {}
+		}
+	},
+	"strasbourg":{
+		"company":{
+			"kaarfor": {},
+			"posped": {},
+			"quarry": {},
+			"trameri": {},
+			"wgcc": {}
+		}
+	},
+	"stuttgart":{
+		"company":{
+			"bcp": {},
+			"lkwlog": {},
+			"quarry": {},
+			"tree_et": {}
+		}
+	},
+	"swansea":{
+		"company":{
+			"euroacres": {},
+			"kaarfor": {},
+			"posped": {},
+			"trameri": {}
+		}
+	},
+	"szczecin":{
+		"company":{
+			"eurogoodies": {},
+			"itcc": {},
+			"transinet": {}
+		}
+	},
+	"torino":{
+		"company":{
+			"euroacres": {},
+			"fcp": {},
+			"sellplan": {},
+			"transinet": {}
+		}
+	},
+	"travemunde":{
+		"company":{
+			"polarislines": {}
+		}
+	},
+	"venezia":{
+		"company":{
+			"eurogoodies": {},
+			"lkwlog": {},
+			"sellplan": {}
+		}
+	},
+	"verona":{
+		"company":{
+			"bcp": {},
+			"euroacres": {},
+			"kaarfor": {},
+			"posped": {}
+		}
+	},
+	"wien":{
+		"company":{
+			"euroacres": {},
+			"eurogoodies": {},
+			"sellplan": {},
+			"stokes": {}
+		}
+	},
+	"wroclaw":{
+		"company":{
+			"euroacres": {},
+			"eurogoodies": {},
+			"quarry": {},
+			"trameri": {}
+		}
+	},
+	"zurich":{
+		"company":{
+			"posped": {},
+			"stokes": {},
+			"tree_et": {}
+		}
+	}
+}

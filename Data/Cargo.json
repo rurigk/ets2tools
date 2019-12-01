@@ -1,0 +1,506 @@
+{
+	"acetylene": [
+		"trailer_def.scs.flatbed.single_3.container"
+	],
+	"acid": [
+		"trailer_def.acid.chcistern"
+	],
+	"almond": [
+		"trailer_def.scs.box.single_3.dryvan_m",
+		"trailer_def.scs.box.single_3.curtain"
+	],
+	"ammunition": [
+		"trailer_def.scs.box.single_3.curtain"
+	],
+	"apples": [
+		"trailer_def.scs.box.single_3.dryvan",
+		"trailer_def.scs.box.single_3.dryvan_m",
+		"trailer_def.scs.box.single_3.curtain"
+	],
+	"apples_c": [
+		"trailer_def.scs.flatbed.single_3.container",
+		"trailer_def.scs.gooseneck.singl_3e_220.container",
+		"trailer_def.scs.gooseneck.singl_3e_40.container"
+	],
+	"arsenic": [
+		"trailer_def.scs.flatbed.single_3.container",
+		"trailer_def.scs.gooseneck.singl_3e_20.container"
+	],
+	"beans": [
+		"trailer_def.scs.box.single_3.curtain",
+		"trailer_def.scs.box.single_3.dryvan"
+	],
+	"beef_meat": [
+		"trailer_def.scs.box.single_3.reefer"
+	],
+	"beverages": [
+		"trailer_def.scs.box.single_3.insulated",
+		"trailer_def.scs.box.single_3.curtain",
+		"trailer_def.scs.box.single_3.reefer",
+		"trailer_def.scs.box.single_3.dryvan"
+	],
+	"beverages_c": [
+		"trailer_def.scs.gooseneck.singl_3e_40.container",
+		"trailer_def.scs.gooseneck.singl_3e_220.container",
+		"trailer_def.scs.flatbed.single_3.container"
+	],
+	"bottle_water": [
+		"trailer_def.scs.box.single_3.dryvan",
+		"trailer_def.scs.box.single_3.curtain"
+	],
+	"canned_beans": [
+		"trailer_def.scs.box.single_3.dryvan"
+	],
+	"carb_water": [
+		"trailer_def.scs.box.single_3.dryvan_m"
+	],
+	"carrots": [
+		"trailer_def.scs.box.single_3.dryvan",
+		"trailer_def.scs.box.single_3.curtain"
+	],
+	"carrots_c": [
+		"trailer_def.scs.gooseneck.singl_3e_20.container",
+		"trailer_def.scs.gooseneck.singl_3e_220.container",
+		"trailer_def.scs.flatbed.single_3.container",
+		"trailer_def.scs.gooseneck.singl_3e_40.container"
+	],
+	"cauliflower": [
+		"trailer_def.scs.box.single_3.dryvan"
+	],
+	"cement": [
+		"trailer_def.cement.cement"
+	],
+	"cheese": [
+		"trailer_def.scs.box.single_3.insulated",
+		"trailer_def.scs.box.single_3.reefer"
+	],
+	"chem_sorb_c": [
+		"trailer_def.scs.flatbed.single_3.container"
+	],
+	"chem_sorbent": [
+		"trailer_def.scs.box.single_3.dryvan"
+	],
+	"chemicals": [
+		"trailer_def.chemicals.chcistern"
+	],
+	"chewing_gums": [
+		"trailer_def.scs.box.single_3.curtain",
+		"trailer_def.scs.box.single_3.dryvan_m",
+		"trailer_def.scs.box.single_3.dryvan"
+	],
+	"chimney_syst": [
+		"trailer_def.scs.box.single_3.curtain",
+		"trailer_def.scs.box.single_3.dryvan"
+	],
+	"chocolate": [
+		"trailer_def.scs.box.single_3.dryvan_m",
+		"trailer_def.scs.box.single_3.dryvan",
+		"trailer_def.scs.box.single_3.curtain"
+	],
+	"clothes": [
+		"trailer_def.scs.box.single_3.curtain"
+	],
+	"clothes_c": [
+		"trailer_def.scs.flatbed.single_3.container"
+	],
+	"coal": [
+		"trailer_def.coal.s_ki_solid.coal"
+	],
+	"contamin": [
+		"trailer_def.scs.flatbed.single_3.container",
+		"trailer_def.scs.gooseneck.singl_3e_220.container",
+		"trailer_def.scs.gooseneck.singl_3e_20.container"
+	],
+	"cyanide": [
+		"trailer_def.scs.flatbed.single_3.container"
+	],
+	"diesel": [
+		"trailer_def.diesel.fuel_cistern",
+		"trailer_def.diesel.willig.fuel_cistern"
+	],
+	"digger1000": [
+		"trailer_def.digger1000.overweight.digger1000"
+	],
+	"digger500": [
+		"trailer_def.digger500.overweight.digger500"
+	],
+	"diggers": [
+		"trailer_def.diggers.overweight.digger"
+	],
+	"dryers": [
+		"trailer_def.scs.box.single_3.curtain",
+		"trailer_def.scs.box.single_3.dryvan"
+	],
+	"drymilk": [
+		"trailer_def.scs.box.single_3.dryvan",
+		"trailer_def.scs.box.single_3.curtain"
+	],
+	"electronics": [
+		"trailer_def.scs.box.single_3.dryvan",
+		"trailer_def.scs.box.single_3.curtain",
+		"trailer_def.scs.box.single_3.dryvan_m"
+	],
+	"empty_palet": [
+		"trailer_def.scs.box.single_3.dryvan_m",
+		"trailer_def.scs.box.single_3.dryvan",
+		"trailer_def.scs.box.single_3.curtain"
+	],
+	"emptytank": [
+		"trailer_def.scs.flatbed.single_3.container",
+		"trailer_def.scs.flatbed.single_3.flatbed_w"
+	],
+	"excavator": [
+		"trailer_def.excavator.overweight.excavator"
+	],
+	"explosives": [
+		"trailer_def.scs.box.single_3.curtain"
+	],
+	"fertilizer": [
+		"trailer_def.scs.flatbed.single_3.brick",
+		"trailer_def.scs.box.single_3.dryvan",
+		"trailer_def.scs.box.single_3.curtain"
+	],
+	"fireworks": [
+		"trailer_def.scs.box.single_3.curtain"
+	],
+	"floorpanels": [
+		"trailer_def.floorpanels.panel_trans.floor"
+	],
+	"flour": [
+		"trailer_def.scs.box.single_3.dryvan",
+		"trailer_def.scs.box.single_3.curtain"
+	],
+	"fluorine": [
+		"trailer_def.scs.flatbed.single_3.container"
+	],
+	"forklifts": [
+		"trailer_def.forklifts.overweight.forklifts"
+	],
+	"fueltanker": [
+		"trailer_def.scs.gooseneck.singl_3e_220.container",
+		"trailer_def.scs.flatbed.single_3.container",
+		"trailer_def.scs.gooseneck.singl_3e_40.container",
+		"trailer_def.scs.gooseneck.singl_3e_20.container"
+	],
+	"furniture": [
+		"trailer_def.scs.box.single_3.dryvan"
+	],
+	"glass": [
+		"trailer_def.glass.panel_trans.glass"
+	],
+	"glass_packed": [
+		"trailer_def.glass_packed.gls_trailer"
+	],
+	"goat_cheese": [
+		"trailer_def.scs.box.single_3.reefer",
+		"trailer_def.scs.box.single_3.insulated"
+	],
+	"grapes": [
+		"trailer_def.scs.box.single_3.reefer",
+		"trailer_def.scs.box.single_3.insulated"
+	],
+	"graph_grease": [
+		"trailer_def.scs.box.single_3.dryvan_m",
+		"trailer_def.scs.box.single_3.dryvan",
+		"trailer_def.scs.box.single_3.curtain"
+	],
+	"grass_rolls": [
+		"trailer_def.scs.box.single_3.curtain",
+		"trailer_def.scs.box.single_3.dryvan_m"
+	],
+	"gravel": [
+		"trailer_def.gravel.s_ki_solid.gravel"
+	],
+	"hchemicals": [
+		"trailer_def.hchemicals.chcistern"
+	],
+	"hipresstank": [
+		"trailer_def.scs.flatbed.single_3.flatbed_w",
+		"trailer_def.scs.flatbed.single_3.container"
+	],
+	"honey": [
+		"trailer_def.scs.box.single_3.dryvan",
+		"trailer_def.scs.box.single_3.curtain"
+	],
+	"icecream": [
+		"trailer_def.scs.box.single_3.reefer"
+	],
+	"iron_pipes": [
+		"trailer_def.scs.log.single_3.steel"
+	],
+	"kerosene": [
+		"trailer_def.kerosene.willig.fuel_cistern"
+	],
+	"ketchup": [
+		"trailer_def.scs.box.single_3.curtain",
+		"trailer_def.scs.box.single_3.dryvan_m"
+	],
+	"largetubes": [
+		"trailer_def.scs.flatbed.single_3.flatbed_w",
+		"trailer_def.scs.flatbed.single_3.container"
+	],
+	"limonades": [
+		"trailer_def.scs.box.single_3.curtain",
+		"trailer_def.scs.box.single_3.dryvan_m",
+		"trailer_def.scs.box.single_3.dryvan"
+	],
+	"logs": [
+		"trailer_def.scs.log.single_3.steel"
+	],
+	"lumber": [
+		"trailer_def.scs.flatbed.single_3.flatbed_w",
+		"trailer_def.scs.flatbed.single_3.container"
+	],
+	"magnesium": [
+		"trailer_def.scs.gooseneck.singl_3e_40.container",
+		"trailer_def.scs.gooseneck.singl_3e_220.container"
+	],
+	"maple_syrup": [
+		"trailer_def.scs.box.single_3.curtain",
+		"trailer_def.scs.box.single_3.dryvan_m",
+		"trailer_def.scs.box.single_3.dryvan"
+	],
+	"mason_jars": [
+		"trailer_def.scs.box.single_3.dryvan_m",
+		"trailer_def.scs.box.single_3.curtain"
+	],
+	"med_equip": [
+		"trailer_def.scs.box.single_3.dryvan",
+		"trailer_def.scs.box.single_3.dryvan_m",
+		"trailer_def.scs.box.single_3.reefer",
+		"trailer_def.scs.box.single_3.curtain"
+	],
+	"med_vaccine": [
+		"trailer_def.scs.box.single_3.reefer"
+	],
+	"mercuric": [
+		"trailer_def.scs.flatbed.single_3.container"
+	],
+	"milk": [
+		"trailer_def.milk.food_cistern"
+	],
+	"mondeos": [
+		"trailer_def.mondeos.car_trans",
+		"trailer_def.mondeos.car_trans3"
+	],
+	"neon": [
+		"trailer_def.scs.gooseneck.singl_3e_40.container"
+	],
+	"nitrocel": [
+		"trailer_def.scs.gooseneck.singl_3e_40.container"
+	],
+	"nitrogen": [
+		"trailer_def.scs.flatbed.single_3.container"
+	],
+	"nonalco_beer": [
+		"trailer_def.scs.box.single_3.dryvan",
+		"trailer_def.scs.box.single_3.dryvan_m"
+	],
+	"nuts": [
+		"trailer_def.scs.box.single_3.dryvan_m",
+		"trailer_def.scs.box.single_3.curtain"
+	],
+	"oil": [
+		"trailer_def.oil.fuel_cistern",
+		"trailer_def.oil.willig.fuel_cistern"
+	],
+	"oil_filt_c": [
+		"trailer_def.scs.flatbed.single_3.container"
+	],
+	"oil_filters": [
+		"trailer_def.scs.box.single_3.dryvan",
+		"trailer_def.scs.box.single_3.curtain"
+	],
+	"oranges": [
+		"trailer_def.scs.box.single_3.reefer"
+	],
+	"ore": [
+		"trailer_def.ore.s_ki_solid.ore"
+	],
+	"outdr_flr_tl": [
+		"trailer_def.scs.box.single_3.dryvan",
+		"trailer_def.scs.box.single_3.dryvan_m"
+	],
+	"overweight": [
+		"trailer_def.scs.flatbed.single_3.container",
+		"trailer_def.scs.flatbed.single_3.flatbed_w"
+	],
+	"packag_food": [
+		"trailer_def.scs.box.single_3.curtain"
+	],
+	"paper": [
+		"trailer_def.scs.box.single_3.dryvan"
+	],
+	"peas": [
+		"trailer_def.scs.box.single_3.dryvan_m",
+		"trailer_def.scs.box.single_3.dryvan"
+	],
+	"pesticide": [
+		"trailer_def.scs.gooseneck.singl_3e_220.container",
+		"trailer_def.scs.gooseneck.singl_3e_20.container"
+	],
+	"petrol": [
+		"trailer_def.petrol.fuel_cistern",
+		"trailer_def.petrol.willig.fuel_cistern"
+	],
+	"phosphor": [
+		"trailer_def.scs.flatbed.single_3.container",
+		"trailer_def.scs.gooseneck.singl_3e_220.container"
+	],
+	"plant_substr": [
+		"trailer_def.scs.box.single_3.dryvan",
+		"trailer_def.scs.box.single_3.curtain"
+	],
+	"plastic_gra": [
+		"trailer_def.plastic_gra.cement"
+	],
+	"plums": [
+		"trailer_def.scs.box.single_3.reefer",
+		"trailer_def.scs.box.single_3.insulated"
+	],
+	"pnut_butter": [
+		"trailer_def.scs.box.single_3.reefer",
+		"trailer_def.scs.box.single_3.curtain",
+		"trailer_def.scs.box.single_3.dryvan"
+	],
+	"potatoes": [
+		"trailer_def.scs.box.single_3.curtain",
+		"trailer_def.scs.box.single_3.dryvan_m",
+		"trailer_def.scs.box.single_3.dryvan"
+	],
+	"precast_strs": [
+		"trailer_def.scs.box.single_3.dryvan",
+		"trailer_def.scs.box.single_3.dryvan_m",
+		"trailer_def.scs.box.single_3.curtain"
+	],
+	"princess": [
+		"trailer_def.princess.overweight.boat"
+	],
+	"radiators": [
+		"trailer_def.scs.box.single_3.curtain",
+		"trailer_def.scs.box.single_3.dryvan_m"
+	],
+	"rice": [
+		"trailer_def.scs.box.single_3.dryvan"
+	],
+	"rice_c": [
+		"trailer_def.scs.flatbed.single_3.container",
+		"trailer_def.scs.gooseneck.singl_3e_220.container",
+		"trailer_def.scs.gooseneck.singl_3e_40.container"
+	],
+	"roof_tiles": [
+		"trailer_def.scs.flatbed.single_3.brick",
+		"trailer_def.scs.box.single_3.curtain"
+	],
+	"roofing_felt": [
+		"trailer_def.scs.box.single_3.dryvan_m",
+		"trailer_def.scs.box.single_3.dryvan"
+	],
+	"rooflights": [
+		"trailer_def.scs.box.single_3.curtain",
+		"trailer_def.scs.box.single_3.dryvan_m",
+		"trailer_def.scs.box.single_3.dryvan"
+	],
+	"sand": [
+		"trailer_def.sand.s_ki_solid.sand"
+	],
+	"sandwch_pnls": [
+		"trailer_def.scs.box.single_3.dryvan_m",
+		"trailer_def.scs.box.single_3.curtain",
+		"trailer_def.scs.box.single_3.dryvan"
+	],
+	"sawpanels": [
+		"trailer_def.scs.box.single_3.curtain",
+		"trailer_def.scs.box.single_3.dryvan",
+		"trailer_def.scs.box.single_3.dryvan_m"
+	],
+	"scrap_metals": [
+		"trailer_def.scrap_metals.s_ki_solid.cover"
+	],
+	"sodchlor": [
+		"trailer_def.sodchlor.chcistern"
+	],
+	"sodhydro": [
+		"trailer_def.scs.gooseneck.singl_3e_40.container",
+		"trailer_def.scs.flatbed.single_3.container"
+	],
+	"stones": [
+		"trailer_def.stones.s_ki_solid.cover"
+	],
+	"straw_bales": [
+		"trailer_def.scs.box.single_3.dryvan",
+		"trailer_def.scs.box.single_3.dryvan_m",
+		"trailer_def.scs.flatbed.single_3.container"
+	],
+	"sugar": [
+		"trailer_def.scs.box.single_3.curtain"
+	],
+	"tableware": [
+		"trailer_def.scs.box.single_3.dryvan"
+	],
+	"tomatoes": [
+		"trailer_def.scs.box.single_3.insulated",
+		"trailer_def.scs.box.single_3.reefer"
+	],
+	"toys": [
+		"trailer_def.scs.box.single_3.dryvan",
+		"trailer_def.scs.box.single_3.curtain"
+	],
+	"tractors": [
+		"trailer_def.tractors.overweight.tractors"
+	],
+	"tyres": [
+		"trailer_def.scs.box.single_3.curtain",
+		"trailer_def.scs.box.single_3.dryvan"
+	],
+	"used_battery": [
+		"trailer_def.scs.box.single_3.dryvan_m"
+	],
+	"used_packag": [
+		"trailer_def.scs.box.single_3.dryvan",
+		"trailer_def.scs.box.single_3.curtain",
+		"trailer_def.scs.box.single_3.dryvan_m"
+	],
+	"used_plast": [
+		"trailer_def.scs.box.single_3.dryvan",
+		"trailer_def.scs.box.single_3.curtain",
+		"trailer_def.scs.box.single_3.dryvan_m"
+	],
+	"used_plast_c": [
+		"trailer_def.scs.gooseneck.singl_3e_220.container",
+		"trailer_def.scs.gooseneck.singl_3e_20.container",
+		"trailer_def.scs.flatbed.single_3.container",
+		"trailer_def.scs.gooseneck.singl_3e_40.container"
+	],
+	"vent_tube": [
+		"trailer_def.scs.flatbed.single_3.container",
+		"trailer_def.scs.flatbed.single_3.flatbed_w"
+	],
+	"vinegar": [
+		"trailer_def.scs.box.single_3.dryvan_m",
+		"trailer_def.scs.box.single_3.dryvan",
+		"trailer_def.scs.box.single_3.curtain"
+	],
+	"vinegar_c": [
+		"trailer_def.scs.flatbed.single_3.container",
+		"trailer_def.scs.gooseneck.singl_3e_220.container",
+		"trailer_def.scs.gooseneck.singl_3e_20.container"
+	],
+	"wallpanels": [
+		"trailer_def.wallpanels.panel_trans.wall"
+	],
+	"watermelons": [
+		"trailer_def.scs.box.single_3.reefer",
+		"trailer_def.scs.box.single_3.insulated"
+	],
+	"wshavings": [
+		"trailer_def.wshavings.s_ki_solid.cover"
+	],
+	"yogurt": [
+		"trailer_def.scs.box.single_3.reefer",
+		"trailer_def.scs.box.single_3.insulated"
+	],
+	"young_seed": [
+		"trailer_def.scs.box.single_3.insulated"
+	]
+}
