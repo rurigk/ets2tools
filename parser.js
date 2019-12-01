@@ -214,6 +214,17 @@ function GenerateCargo(details)
 function ImportCargoRoutine()
 {
 	var cargos = fs.readdirSync('./Import/Cargo');
+	for (let i = cargos.length - 1; i >= 0; i--) {
+		if(cargos[i][0] == '.')
+		{
+			cargos.splice(i,1);
+		}
+	}
+	if(cargos.length == 0)
+	{
+		console.log("No files to import");
+		return;
+	}
 	inquirer.prompt([
 		{
 			type: 'list',
