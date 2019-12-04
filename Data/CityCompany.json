@@ -557,5 +557,1070 @@
 			"stokes": {},
 			"tree_et": {}
 		}
-	}
+	},
+
+
+
+	"aalborg":{
+		"company":{
+			"aria_fd_albg": {},
+			"ika_bohag": {},
+			"nord_crown": {},
+			"norrsken": {},
+			"ns_oil": {},
+			"polar_fish": {},
+			"vitas_pwr": {}
+		}
+	},
+	"alban":{
+		"company":{
+			"nucleon": {}
+		}
+	},
+	"ancona":{
+		"company":{
+			"c_navale": {},
+			"cnp": {},
+			"cont_port_it": {},
+			"exomar": {},
+			"ika_bohag": {},
+			"libellula": {},
+			"marina_it": {}
+		}
+	},
+	"bari":{
+		"company":{
+			"aci": {},
+			"cont_port_it": {},
+			"marina_it": {},
+			"quadrelli": {},
+			"tras_med": {}
+		}
+	},
+	"bergen":{
+		"company":{
+			"drekkar": {},
+			"gnt": {},
+			"nord_crown": {},
+			"polar_fish": {},
+			"polarislines": {}
+		}
+	},
+	"bialystok":{
+		"company":{
+			"euroacres": {},
+			"itcc": {},
+			"transinet": {},
+			"tree_et": {}
+		}
+	},
+	"bologna":{
+		"company":{
+			"aci": {},
+			"exomar": {},
+			"ika_bohag": {},
+			"libellula": {},
+			"piac": {},
+			"pp_chimica": {}
+		}
+	},
+	"bordeaux":{
+		"company":{
+			"batisse_road": {},
+			"bhv": {},
+			"dans_jardin": {},
+			"globeur": {},
+			"huilant": {},
+			"ika_bohag": {},
+			"lisette_log": {},
+			"mvm_carriere": {}
+		}
+	},
+	"bourges":{
+		"company":{
+			"dans_jardin": {},
+			"globeur": {},
+			"gomme_monde": {},
+			"nos_pat_brg": {}
+		}
+	},
+	"brest":{
+		"company":{
+			"batisse_wind": {},
+			"fle": {},
+			"ika_bohag": {},
+			"marina_fr": {},
+			"subse": {},
+			"tradeaux": {}
+		}
+	},
+	"budapest":{
+		"company":{
+			"kaarfor": {},
+			"nbfc": {},
+			"tradeaux": {},
+			"trameri": {}
+		}
+	},
+	"bystrica":{
+		"company":{
+			"eurogoodies": {},
+			"posped": {},
+			"stokes": {},
+			"tree_et": {}
+		}
+	},
+	"cagliari":{
+		"company":{
+			"aaa": {},
+			"aci": {},
+			"costruzi_win": {},
+			"eolo_lines": {},
+			"marina_it": {},
+			"te_logistica": {},
+			"tras_med": {}
+		}
+	},
+	"cassino":{
+		"company":{
+			"piac": {},
+			"spinelli": {}
+		}
+	},
+	"catania":{
+		"company":{
+			"acc": {},
+			"cnp": {},
+			"fui": {},
+			"ika_bohag": {},
+			"marina_it": {},
+			"quadrelli": {},
+			"tras_med": {}
+		}
+	},
+	"catanzaro":{
+		"company":{
+			"aci": {},
+			"cargotras": {},
+			"costruzi_fla": {},
+			"fui": {}
+		}
+	},
+	"civaux":{
+		"company":{
+			"nucleon": {}
+		}
+	},
+	"clermont":{
+		"company":{
+			"batisse_base": {},
+			"fle": {},
+			"gomme_monde": {},
+			"ika_bohag": {},
+			"nos_pat_cf": {},
+			"subse": {},
+			"tradeaux": {}
+		}
+	},
+	"daugavpils":{
+		"company":{
+			"baltomorsk": {},
+			"eviksi": {},
+			"gnt": {},
+			"lateds": {},
+			"lvr": {},
+			"ns_oil": {},
+			"ns_oil": {}
+		}
+	},
+	"debrecen":{
+		"company":{
+			"euroacres": {},
+			"eurogoodies": {},
+			"sanbuilders": {},
+			"transinet": {}
+		}
+	},
+	"esbjerg":{
+		"company":{
+			"agronord": {},
+			"aria_fd_esbj": {},
+			"cont_port": {},
+			"konstnr_wind": {},
+			"marina": {},
+			"polarislines": {},
+			"vitas_pwr": {}
+		}
+	},
+	"firenze":{
+		"company":{
+			"costruzi_bas": {},
+			"fui": {},
+			"ika_bohag": {},
+			"marmo": {},
+			"te_logistica": {},
+			"tesore_gust": {}
+		}
+	},
+	"frederikshv":{
+		"company":{
+			"polarislines": {}
+		}
+	},
+	"gdansk":{
+		"company":{
+			"bcp": {},
+			"euroacres": {},
+			"lkwlog": {},
+			"sanbuilders": {},
+			"wgcc": {}
+		}
+	},
+	"gedser":{
+		"company":{
+			"konstnr_wind": {},
+			"polarislines": {}
+		}
+	},
+	"genova":{
+		"company":{
+			"aci": {},
+			"cont_port_it": {},
+			"costruzi_hal": {},
+			"marina_it": {},
+			"tras_med": {}
+		}
+	},
+	"golfech":{
+		"company":{
+			"nucleon": {}
+		}
+	},
+	"goteborg":{
+		"company":{
+			"agronord": {},
+			"bhv": {},
+			"norrsken": {},
+			"ns_oil": {},
+			"polar_fish": {},
+			"polarislines": {},
+			"sag_tre": {},
+			"volvo_dlr": {},
+			"volvo_fac": {},
+			"vpc": {}
+		}
+	},
+	"helsingborg":{
+		"company":{
+			"bhv": {},
+			"gnt": {},
+			"konstnr_hs": {},
+			"norr_food": {}
+		}
+	},
+	"helsinki":{
+		"company":{
+			"aerobalt": {},
+			"ateria": {},
+			"cont_port": {},
+			"egres": {},
+			"ibp": {},
+			"ika_bohag": {},
+			"kivi": {},
+			"marina_it": {},
+			"polarislines": {},
+			"renat": {},
+			"sal_fi": {}
+		}
+	},
+	"hirtshals":{
+		"company":{
+			"polarislines": {}
+		}
+	},
+	"jonkoping":{
+		"company":{
+			"aria_fd_jnpg": {},
+			"bhv": {},
+			"gnt": {},
+			"nord_sten": {},
+			"norr_food": {}
+		}
+	},
+	"kaliningrad":{
+		"company":{
+			"cemelt_fl_ru": {},
+			"ladoga_ru": {},
+			"ns_oil_ru": {},
+			"pk_medved_ru": {},
+			"rosmark_ru": {},
+			"suprema_ru": {},
+			"zelenye_a": {}
+		}
+	},
+	"kalmar":{
+		"company":{
+			"agronord": {},
+			"gnt": {},
+			"ika_bohag": {},
+			"nord_sten": {},
+			"norr_food": {},
+			"ns_oil": {}
+		}
+	},
+	"kapellskar":{
+		"company":{
+			"polarislines": {}
+		}
+	},
+	"karlskrona":{
+		"company":{
+			"drekkar": {},
+			"norr_food": {},
+			"norrsken": {},
+			"polarislines": {}
+		}
+	},
+	"katowice":{
+		"company":{
+			"posped": {},
+			"quarry": {},
+			"stokes": {},
+			"tree_et": {}
+		}
+	},
+	"kaunas":{
+		"company":{
+			"aerobalt": {},
+			"baltomorsk": {},
+			"bhv": {},
+			"blt": {},
+			"cemelt_bas": {},
+			"ns_chem": {},
+			"suprema": {}
+		}
+	},
+	"klaipeda":{
+		"company":{
+			"baltomorsk": {},
+			"cemelt_win": {},
+			"cont_port": {},
+			"gnt": {},
+			"marina_it": {},
+			"nosko": {},
+			"ns_oil": {}
+		}
+	},
+	"kobenhavn":{
+		"company":{
+			"bhv": {},
+			"ika_bohag": {},
+			"konstnr": {},
+			"norr_food": {},
+			"renar": {}
+		}
+	},
+	"kosice":{
+		"company":{
+			"bcp": {},
+			"itcc": {},
+			"lkwlog": {},
+			"sellplan": {}
+		}
+	},
+	"kotka":{
+		"company":{
+			"cont_port": {},
+			"kivi": {},
+			"lintukainen": {},
+			"ns_oil": {},
+			"renar": {}
+		}
+	},
+	"kouvola":{
+		"company":{
+			"egres": {},
+			"lintukainen": {},
+			"nch": {},
+			"radus": {},
+			"sal_fi": {},
+			"viljo_paper": {}
+		}
+	},
+	"krakow":{
+		"company":{
+			"euroacres": {},
+			"sanbuilders": {},
+			"tradeaux": {},
+			"trameri": {}
+		}
+	},
+	"kristiansand":{
+		"company":{
+			"agronord": {},
+			"bhv": {},
+			"bjork": {},
+			"gnt": {},
+			"ms_stein": {},
+			"ns_chem": {},
+			"polarislines": {}
+		}
+	},
+	"kunda":{
+		"company":{
+			"blt": {},
+			"ee_paper": {}
+		}
+	},
+	"lahti":{
+		"company":{
+			"ateria": {},
+			"bhv": {},
+			"renar": {},
+			"suprema": {}
+		}
+	},
+	"larochelle":{
+		"company":{
+			"batisse_wind": {},
+			"chimi": {},
+			"huilant": {},
+			"kaarfor": {},
+			"lisette_log": {},
+			"marina_fr": {}
+		}
+	},
+	"laurent":{
+		"company":{
+			"nucleon": {}
+		}
+	},
+	"lehavre":{
+		"company":{
+			"bhb_raffin": {},
+			"cont_port_fr": {},
+			"globeur": {},
+			"nos_pat_lhv": {},
+			"voitureux": {}
+		}
+	},
+	"lemans":{
+		"company":{
+			"batisse_road": {},
+			"bhv": {},
+			"boisserie": {},
+			"dans_jardin": {},
+			"lisette_log": {},
+			"mvm_carriere": {},
+			"wilnet_trans": {}
+		}
+	},
+	"liepaja":{
+		"company":{
+			"bltmetal": {},
+			"cemelt_win": {},
+			"eviksi": {},
+			"eviksi_a": {},
+			"polarislines": {},
+			"rosmark": {}
+		}
+	},
+	"limoges":{
+		"company":{
+			"bhv": {},
+			"boisserie": {},
+			"kaarfor": {},
+			"mvm_carriere": {},
+			"wilnet_trans": {}
+		}
+	},
+	"linkoping":{
+		"company":{
+			"bhv": {},
+			"drekkar": {},
+			"ika_bohag": {},
+			"konstnr_br": {},
+			"konstnr_wind": {},
+			"nord_sten": {},
+			"norr_food": {},
+			"sag_tre": {}
+		}
+	},
+	"livorno":{
+		"company":{
+			"cargotras": {},
+			"cnp": {},
+			"cont_port_it": {},
+			"libellula": {},
+			"marmo": {},
+			"sal": {}
+		}
+	},
+	"lodz":{
+		"company":{
+			"eurogoodies": {},
+			"lkwlog": {},
+			"posped": {},
+			"sellplan": {}
+		}
+	},
+	"loviisa":{
+		"company":{
+			"ukko": {}
+		}
+	},
+	"lublin":{
+		"company":{
+			"eurogoodies": {},
+			"kaarfor": {},
+			"lkwlog": {},
+			"posped": {}
+		}
+	},
+	"luga":{
+		"company":{
+			"baltomors_ru": {},
+			"domdepo_ru": {},
+			"ns_chem_ru": {},
+			"rosmark_ru": {}
+		}
+	},
+	"malmo":{
+		"company":{
+			"drekkar": {},
+			"ika_bohag": {},
+			"konstnr_br": {},
+			"norrsken": {},
+			"ns_chem": {}
+		}
+	},
+	"marseille":{
+		"company":{
+			"bhb_raffin": {},
+			"boisserie": {},
+			"cont_port_fr": {},
+			"dans_jardin": {},
+			"marina_fr": {},
+			"wilnet_trans": {}
+		}
+	},
+	"mazeikiai":{
+		"company":{
+			"ibp": {}
+		}
+	},
+	"messina":{
+		"company":{
+			"c_navale": {},
+			"eolo_lines": {},
+			"te_logistica": {}
+		}
+	},
+	"montpellier":{
+		"company":{
+			"batisse_hs": {},
+			"batisse_wind": {},
+			"bhv": {},
+			"chimi": {},
+			"dans_jardin": {},
+			"fle": {},
+			"globeur": {},
+			"ika_bohag": {},
+			"kaarfor": {},
+			"mvm_carriere": {}
+		}
+	},
+	"naantali":{
+		"company":{
+			"ibp": {},
+			"polarislines": {}
+		}
+	},
+	"nantes":{
+		"company":{
+			"bhv": {},
+			"dans_jardin": {},
+			"fle": {},
+			"kaarfor": {},
+			"subse": {},
+			"wilnet_trans": {}
+		}
+	},
+	"napoli":{
+		"company":{
+			"cnp": {},
+			"cont_port_it": {},
+			"eolo_lines": {},
+			"fattoria_f": {},
+			"ika_bohag": {},
+			"marina_it": {},
+			"piac": {},
+			"te_logistica": {},
+			"tesore_gust": {}
+		}
+	},
+	"narva":{
+		"company":{
+			"onnelik": {},
+			"renar": {}
+		}
+	},
+	"nice":{
+		"company":{
+			"bhv": {},
+			"kaarfor": {},
+			"lisette_log": {},
+			"mvm_carriere": {},
+			"tradeaux": {}
+		}
+	},
+	"nynashamn":{
+		"company":{
+			"polarislines": {}
+		}
+	},
+	"odense":{
+		"company":{
+			"bhv": {},
+			"drekkar": {},
+			"ika_bohag": {},
+			"nord_crown": {},
+			"norr_food": {}
+		}
+	},
+	"olbia":{
+		"company":{
+			"c_navale": {},
+			"cargotras": {},
+			"exomar": {},
+			"fui": {},
+			"marina_it": {},
+			"marmo": {},
+			"pp_chimica": {}
+		}
+	},
+	"olkiluoto":{
+		"company":{
+			"ukko": {}
+		}
+	},
+	"olsztyn":{
+		"company":{
+			"eurogoodies": {},
+			"fcp": {},
+			"sellplan": {},
+			"tradeaux": {},
+			"tree_et": {}
+		}
+	},
+	"orebro":{
+		"company":{
+			"bhv": {},
+			"ika_bohag": {},
+			"nord_crown": {},
+			"norrsken": {}
+		}
+	},
+	"oslo":{
+		"company":{
+			"cont_port": {},
+			"ika_bohag": {},
+			"konstnr": {},
+			"marina": {},
+			"ms_stein": {},
+			"norr_food": {},
+			"ns_oil": {},
+			"polarislines": {},
+			"renar": {},
+			"sag_tre": {}
+		}
+	},
+	"ostrava":{
+		"company":{
+			"itcc": {},
+			"kaarfor": {},
+			"nbfc": {},
+			"transinet": {}
+		}
+	},
+	"paldiski":{
+		"company":{
+			"blt": {},
+			"cemelt_win": {},
+			"ns_oil": {},
+			"polarislines": {}
+		}
+	},
+	"palermo":{
+		"company":{
+			"cargotras": {},
+			"cesare_smar": {},
+			"costruzi_win": {},
+			"eolo_lines": {},
+			"marmo": {}
+		}
+	},
+	"paluel":{
+		"company":{
+			"nucleon": {}
+		}
+	},
+	"panevezys":{
+		"company":{
+			"bhv": {},
+			"cemelt_hal": {},
+			"gnt": {},
+			"suprema": {}
+		}
+	},
+	"parma":{
+		"company":{
+			"piac": {},
+			"spinelli": {},
+			"te_logistica": {},
+			"tesore_gust": {}
+		}
+	},
+	"parnu":{
+		"company":{
+			"bhv": {},
+			"marina_it": {},
+			"onnelik": {},
+			"onnelik_a": {},
+			"renar": {},
+			"suprema": {}
+		}
+	},
+	"pecs":{
+		"company":{
+			"bcp": {},
+			"euroacres": {},
+			"tradeaux": {}
+		}
+	},
+	"pescara":{
+		"company":{
+			"aaa": {},
+			"cargotras": {},
+			"cesare_smar": {},
+			"costruzi_win": {},
+			"ika_bohag": {},
+			"quadrelli": {},
+			"sal": {}
+		}
+	},
+	"petersburg":{
+		"company":{
+			"aerobalt_ru": {},
+			"baltomors_ru": {},
+			"blt_ru": {},
+			"blt_yacht_ru": {},
+			"cont_port_ru": {},
+			"fintyre_ru": {},
+			"ika_ru": {},
+			"ladoga_ru": {},
+			"nch_ru": {},
+			"pk_medved_ru": {},
+			"radus_ru": {},
+			"zelenye": {}
+		}
+	},
+	"pori":{
+		"company":{
+			"bltmetal": {},
+			"cont_port": {},
+			"lintukainen": {},
+			"ns_chem": {},
+			"sal_fi": {}
+		}
+	},
+	"pskov":{
+		"company":{
+			"baltomors_ru": {},
+			"blt_ru": {},
+			"bltmetal_ru": {},
+			"ns_oil_ru": {},
+			"suprema_ru": {}
+		}
+	},
+	"rennes":{
+		"company":{
+			"batisse_base": {},
+			"globeur": {},
+			"ika_bohag": {},
+			"lisette_log": {},
+			"voitureux": {}
+		}
+	},
+	"rezekne":{
+		"company":{
+			"baltomorsk": {},
+			"renat": {},
+			"rosmark": {},
+			"suprema": {}
+		}
+	},
+	"riga":{
+		"company":{
+			"aerobalt": {},
+			"blt_yacht": {},
+			"eviksi": {},
+			"kivi": {},
+			"lvr": {},
+			"marina_it": {},
+			"nch": {},
+			"ns_chem": {},
+			"renat": {},
+			"rosmark": {}
+		}
+	},
+	"roma":{
+		"company":{
+			"aaa": {},
+			"aci": {},
+			"exomar": {},
+			"fattoria_f": {},
+			"fui": {},
+			"ika_bohag": {},
+			"pp_chimica": {},
+			"tesore_gust": {},
+			"tras_med": {}
+		}
+	},
+	"roscoff":{
+		"company":{
+			"gallia_ferry": {},
+			"lisette_log": {}
+		}
+	},
+	"sangiovanni":{
+		"company":{
+			"eolo_lines": {}
+		}
+	},
+	"sassari":{
+		"company":{
+			"cargotras": {},
+			"cesare_smar": {},
+			"costruzi_hal": {},
+			"eolo_lines": {},
+			"marmo": {},
+			"sal": {},
+			"te_logistica": {}
+		}
+	},
+	"siauliai":{
+		"company":{
+			"bhv": {},
+			"blt": {},
+			"bltmetal": {},
+			"renat": {}
+		}
+	},
+	"sodertalje":{
+		"company":{
+			"scania_fac": {}
+		}
+	},
+	"sosnovy_bor":{
+		"company":{
+			"severoatm_ru": {}
+		}
+	},
+	"stavanger":{
+		"company":{
+			"ika_bohag": {},
+			"ms_stein": {},
+			"nord_crown": {},
+			"ns_oil": {},
+			"polar_fish": {},
+			"polarislines": {},
+			"renar": {}
+		}
+	},
+	"stockholm":{
+		"company":{
+			"bhv": {},
+			"ika_bohag": {},
+			"konstnr": {},
+			"marina": {},
+			"norr_food": {},
+			"norrsken": {},
+			"ns_chem": {},
+			"scania_dlr": {}
+		}
+	},
+	"suzzara":{
+		"company":{
+			"comoto": {}
+		}
+	},
+	"szeged":{
+		"company":{
+			"euroacres": {},
+			"lkwlog": {},
+			"posped": {},
+			"trameri": {}
+		}
+	},
+	"tallinn":{
+		"company":{
+			"aerobalt": {},
+			"ateria": {},
+			"blt_yacht": {},
+			"bltmetal": {},
+			"cont_port": {},
+			"lintukainen": {},
+			"marina_it": {},
+			"nch": {},
+			"ns_oil": {},
+			"polarislines": {},
+			"renar": {}
+		}
+	},
+	"tampere":{
+		"company":{
+			"fintyre": {},
+			"ika_bohag": {},
+			"radus": {},
+			"renar": {},
+			"suprema": {},
+			"viljo_paper": {}
+		}
+	},
+	"taranto":{
+		"company":{
+			"aaa": {},
+			"acc": {},
+			"cnp": {},
+			"costruzi_win": {},
+			"exomar": {},
+			"marina_it": {},
+			"vitas_pwr": {}
+		}
+	},
+	"tartu":{
+		"company":{
+			"blt": {},
+			"kivi": {},
+			"lintukainen": {},
+			"onnelik_a": {},
+			"radus": {},
+			"renat": {},
+			"suprema": {}
+		}
+	},
+	"terni":{
+		"company":{
+			"acc": {},
+			"pp_chimica": {},
+			"sal": {}
+		}
+	},
+	"toulouse":{
+		"company":{
+			"bhv": {},
+			"fle": {},
+			"tradeaux": {},
+			"wilnet_trans": {}
+		}
+	},
+	"trelleborg":{
+		"company":{
+			"aria_fd_trbg": {},
+			"polarislines": {}
+		}
+	},
+	"turku":{
+		"company":{
+			"aerobalt": {},
+			"blt_yacht": {},
+			"kivi": {},
+			"ladoga": {},
+			"nch": {},
+			"renar": {}
+		}
+	},
+	"uppsala":{
+		"company":{
+			"drekkar": {},
+			"gnt": {},
+			"ika_bohag": {},
+			"norr_food": {}
+		}
+	},
+	"utena":{
+		"company":{
+			"agrominta": {},
+			"agrominta_a": {},
+			"blt": {},
+			"domdepo": {},
+			"kivi": {},
+			"nosko": {}
+		}
+	},
+	"valmiera":{
+		"company":{
+			"baltomorsk": {},
+			"cemelt_fla": {},
+			"domdepo": {},
+			"eviksi_a": {},
+			"gnt": {},
+			"lateds": {},
+			"ns_oil": {}
+		}
+	},
+	"vasteraas":{
+		"company":{
+			"konstnr_hs": {},
+			"norr_food": {},
+			"renar": {}
+		}
+	},
+	"vaxjo":{
+		"company":{
+			"bhv": {},
+			"bjork": {},
+			"drekkar": {},
+			"nord_sten": {},
+			"norr_food": {},
+			"renar": {}
+		}
+	},
+	"ventspils":{
+		"company":{
+			"baltomorsk": {},
+			"eviksi_a": {},
+			"gnt": {},
+			"ns_oil": {},
+			"polarislines": {}
+		}
+	},
+	"vilnius":{
+		"company":{
+			"aerobalt": {},
+			"bhv": {},
+			"gnt": {},
+			"ika_bohag": {},
+			"nch": {},
+			"nosko": {},
+			"viln_paper": {}
+		}
+	},
+	"vyborg":{
+		"company":{
+			"baltomors_ru": {},
+			"domdepo_ru": {},
+			"kamen_ru": {},
+			"rosmark_ru": {}
+		}
+	},
+	"warszawa":{
+		"company":{
+			"posped": {},
+			"sanbuilders": {},
+			"stokes": {},
+			"trameri": {}
+		}
+	},
 }

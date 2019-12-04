@@ -1,0 +1,24 @@
+{
+    "air_mails": [
+		"trailer_def.scs.box.single_3.dryvan_m", 
+		"trailer_def.scs.box.single_3.curtain"
+	],
+	"aircft_tires": [
+		"trailer_def.scs.box.single_3.dryvan",
+		"trailer_def.scs.box.single_3.curtain"
+	],
+	"aircond": [
+		"trailer_def.aircond.overweight.aircond"
+    ],
+    "asph_miller(h)": [
+		"trailer_def.asph_miller.goldhofer.mpa_k_flat14.wirtgenw250i"
+	],
+	"barley": [
+		"trailer_def.barley.s_ki_solid.cover"
+	],
+	"basil": [
+		"trailer_def.scs.box.single_3.curtain",
+		"trailer_def.scs.box.single_3.dryvan",
+		"trailer_def.scs.box.single_3.dryvan_m"
+	]
+}

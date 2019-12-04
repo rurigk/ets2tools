@@ -1,18 +1,23 @@
 {
   "name": "ets2utils",
   "version": "1.0.0",
-  "description": "",
+  "description": "Euro truck simulator 2 tools",
   "main": "parser.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "ets2"
+    "ets2",
+    "Euro truck simulator 2",
+    "Tools"
   ],
   "author": "rurigk",
   "license": "MIT",
   "dependencies": {
     "inquirer": "^7.0.0",
     "platform-folders": "^0.4.1"
+  },
+  "devDependencies": {
+    "pkg": "^4.4.0"
   }
 }
