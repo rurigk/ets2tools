@@ -730,7 +730,7 @@
 			"lateds": {},
 			"lvr": {},
 			"ns_oil": {},
-			"ns_oil": {}
+			"renat": {}
 		}
 	},
 	"debrecen":{
@@ -1622,5 +1622,5 @@
 			"stokes": {},
 			"trameri": {}
 		}
-	},
+	}
 }
