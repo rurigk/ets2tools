@@ -132,9 +132,9 @@ function LoadSave(savePath)
 			choices: [
 				'Change assigned trailer',
 				'Generate cargo',
-				'Import cargo',
-				'Export GPS',
-				'Import GPS'
+				'Import cargo'
+				//'Export GPS',
+				//'Import GPS'
 			],
 			pageSize: 30
 		}
@@ -250,7 +250,7 @@ function GenerateCargoRoutine()
 						cargoDetails.cargo = cargo;
 						RequestRawList('Select trailer', cargos[cargo], (trailer) => {
 							cargoDetails.trailer = trailer;
-							GenerateCargo(cargoDetails);
+							GenerateCargo(cargoDetails, true);
 						})
 					})
 				})
@@ -261,7 +261,7 @@ function GenerateCargoRoutine()
 	// Select first job related to that company anc modify job_offer_data
 }
 
-function GenerateCargo(details)
+function GenerateCargo(details, exportsave)
 {
 	var cityCompany = SiiNunit.company[`company.volatile.${details.origin_company}.${details.origin_city}`];
 	if(typeof cityCompany == 'undefined')
@@ -275,15 +275,17 @@ function GenerateCargo(details)
 		console.log('The company has no jobs to replace');
 		return;
 	}
+
+	var economyKey = Object.keys(SiiNunit.economy)[0];
+	var gameTime = SiiNunit.economy[economyKey].game_time
 	
 	var offerToken = cityCompany.job_offer[0].toString();
-
 	SiiNunit.job_offer_data[offerToken].target = `${details.target_company}.${details.target_city}`;
 	SiiNunit.job_offer_data[offerToken].cargo = new SiiParser.Token(`cargo.${details.cargo}`);
 	SiiNunit.job_offer_data[offerToken].trailer_definition = new SiiParser.Token(details.trailer);
 	SiiNunit.job_offer_data[offerToken].trailer_variant = new SiiParser.Token(trailerVariants[details.trailer][0]);
 	SiiNunit.job_offer_data[offerToken].urgency = 0;
-	SiiNunit.job_offer_data[offerToken].expiration_time = 100000;
+	SiiNunit.job_offer_data[offerToken].expiration_time = gameTime + 5000n;
 	SiiNunit.job_offer_data[offerToken].units_count = 33;
 	SiiNunit.job_offer_data[offerToken].shortest_distance_km = 0;
 	SiiNunit.job_offer_data[offerToken].ferry_price = 0;
@@ -296,14 +298,40 @@ function GenerateCargo(details)
 
 		SiiNunit.job_offer_data[offerToken].shortest_distance_km = (distance < 0)? 0 : distance;
 		SiiNunit.job_offer_data[offerToken].ferry_price = (ferryPrice < 0)? 0 : ferryPrice;
-		SiiNunit.job_offer_data[offerToken].ferry_time = 0;
 	}
 	
+	UpdateEconomyEventTime(`company.volatile.${details.origin_company}.${details.origin_city}`, 0n, gameTime + 5000n);
+
 	var serialized = SiiParser.Sii.Serialize(SiiNunit);
 	fs.writeFileSync(status.savePath, serialized);
-	fs.writeFileSync(`./Export/Cargo/${details.origin_city}_${details.origin_company}-${details.target_city}_${details.target_company}-${details.cargo}.json`, JSON.stringify(details));
+	if(exportsave)
+	{
+		fs.writeFileSync(`./Export/Cargo/${details.origin_city}_${details.origin_company}-${details.target_city}_${details.target_company}-${details.cargo}.json`, JSON.stringify(details));
+	}
 }
 
+function UpdateEconomyEventTime(unit_link, param, time)
+{
+	var nameless = null;
+	for(var namelessEE in SiiNunit.economy_event)
+	{
+		if(SiiNunit.economy_event[namelessEE].unit_link.toString() == unit_link && SiiNunit.economy_event[namelessEE].param == param)
+		{
+			nameless = namelessEE;
+			SiiNunit.economy_event[namelessEE].time = time;
+		}
+	}
+	var firstEconomyQueue = Object.keys(SiiNunit.economy_event_queue)[0];
+	for (let i = 0; i < SiiNunit.economy_event_queue[firstEconomyQueue].data.length; i++) {
+		const element = SiiNunit.economy_event_queue[firstEconomyQueue].data[i];
+		if(SiiNunit.economy_event_queue[firstEconomyQueue].data[i].toString() == nameless)
+		{
+			SiiNunit.economy_event_queue[firstEconomyQueue].data.splice(i,1);
+			break;
+		}
+	}
+	SiiNunit.economy_event_queue[firstEconomyQueue].data.push(new SiiParser.Token(nameless))
+}
 function ImportCargoRoutine()
 {
 	var cargos = fs.readdirSync('./Import/Cargo');
@@ -331,44 +359,7 @@ function ImportCargoRoutine()
 		try{
 			let details = JSON.parse(fs.readFileSync(`./Import/Cargo/${answers.cargos}`));
 
-			var cityCompany = SiiNunit.company[`company.volatile.${details.origin_company}.${details.origin_city}`];
-			if(typeof cityCompany == 'undefined')
-			{
-				console.log('City not discovered');
-				return;
-			}
-
-			if(cityCompany.job_offer.length == 0)
-			{
-				console.log('The company has no jobs to replace');
-				return;
-			}
-			
-			var offerToken = cityCompany.job_offer[0].toString();
-			SiiNunit.job_offer_data[offerToken].target = `${details.target_company}.${details.target_city}`;
-			SiiNunit.job_offer_data[offerToken].cargo = new SiiParser.Token(`cargo.${details.cargo}`);
-			SiiNunit.job_offer_data[offerToken].trailer_definition = new SiiParser.Token(details.trailer);
-			SiiNunit.job_offer_data[offerToken].trailer_variant = new SiiParser.Token(trailerVariants[details.trailer][0]);
-			SiiNunit.job_offer_data[offerToken].urgency = 0;
-			SiiNunit.job_offer_data[offerToken].expiration_time = 100000;
-			SiiNunit.job_offer_data[offerToken].units_count = 33;
-			SiiNunit.job_offer_data[offerToken].shortest_distance_km = 0;
-			SiiNunit.job_offer_data[offerToken].ferry_price = 0;
-			SiiNunit.job_offer_data[offerToken].ferry_time = 0;
-			
-			if(typeof cityTargets[details.origin_city] != 'undefined' && typeof cityTargets[details.origin_city][details.target_city] != 'undefined')
-			{
-				let distance = cityTargets[details.origin_city][details.target_city].distance;
-				let ferryPrice = cityTargets[details.origin_city][details.target_city].ferry;
-
-				SiiNunit.job_offer_data[offerToken].shortest_distance_km = (distance < 0)? 0 : distance;
-				SiiNunit.job_offer_data[offerToken].ferry_price = (ferryPrice < 0)? 0 : ferryPrice;
-				SiiNunit.job_offer_data[offerToken].ferry_time = 0;
-				SiiNunit.job_offer_data[offerToken].units_count = 33;
-			}
-
-			var serialized = SiiParser.Sii.Serialize(SiiNunit);
-			fs.writeFileSync(status.savePath, serialized);
+			GenerateCargo(details, false);
 		}catch(e)
 		{
 			console.log('Error loading the cargo')
@@ -444,7 +435,7 @@ function ImportGPSRoutine()
 					nav_node_position: new SiiParser.Set(point['nav_node_position'].x, point['nav_node_position'].y, point['nav_node_position'].z),
 					direction: new SiiParser.Token(point['direction']['token'])
 				})
-				SiiNunit.economy[economyKey]['stored_gps_behind_waypoints'].push(nameless);
+				SiiNunit.economy[economyKey]['stored_gps_behind_waypoints'].push(new SiiParser.Token(nameless));
 				SiiNunit.__order.push(['gps_waypoint_storage', nameless]);
 			}
 
@@ -455,7 +446,7 @@ function ImportGPSRoutine()
 					nav_node_position: new SiiParser.Set(point['nav_node_position'].x, point['nav_node_position'].y, point['nav_node_position'].z),
 					direction: new SiiParser.Token(point['direction']['token'])
 				})
-				SiiNunit.economy[economyKey]['stored_gps_ahead_waypoints'].push(nameless);
+				SiiNunit.economy[economyKey]['stored_gps_ahead_waypoints'].push(new SiiParser.Token(nameless));
 				SiiNunit.__order.push(['gps_waypoint_storage', nameless]);
 			}
 
