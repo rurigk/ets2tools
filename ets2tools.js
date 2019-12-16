@@ -124,6 +124,11 @@ function LoadSave(savePath)
 	ExtractNameless();
 	GetMaxNamelessCount();
 
+	ActionPrompt();
+}
+
+function ActionPrompt()
+{
 	inquirer.prompt([
 		{
 			type: 'list',
@@ -160,7 +165,7 @@ function LoadSave(savePath)
 			default:
 				console.log('Unknown action')
 		}
-	});	
+	});
 }
 
 function ExtractNameless()
@@ -224,6 +229,8 @@ function ChangeAssignedTrailerRoutine()
 		SiiNunit.player[player]['assigned_trailer'] = new SiiParser.Token(answers.trailer);
 		var serialized = SiiParser.Sii.Serialize(SiiNunit);
 		fs.writeFileSync(status.savePath, serialized);
+		console.log('\n');
+		ActionPrompt();
 		//fs.writeFileSync('capture.json', JSON.stringify(SiiNunit));
 	});	
 }
@@ -251,6 +258,8 @@ function GenerateCargoRoutine()
 						RequestRawList('Select trailer', cargos[cargo], (trailer) => {
 							cargoDetails.trailer = trailer;
 							GenerateCargo(cargoDetails, true);
+							console.log('\n');
+							ActionPrompt();
 						})
 					})
 				})
@@ -267,12 +276,16 @@ function GenerateCargo(details, exportsave)
 	if(typeof cityCompany == 'undefined')
 	{
 		console.log('City not discovered');
+		console.log('\n');
+		ActionPrompt();
 		return;
 	}
 
 	if(cityCompany.job_offer.length == 0)
 	{
 		console.log('The company has no jobs to replace');
+		console.log('\n');
+		ActionPrompt();
 		return;
 	}
 
@@ -344,6 +357,8 @@ function ImportCargoRoutine()
 	if(cargos.length == 0)
 	{
 		console.log("No files to import");
+		console.log('\n');
+		ActionPrompt();
 		return;
 	}
 	inquirer.prompt([
@@ -360,6 +375,8 @@ function ImportCargoRoutine()
 			let details = JSON.parse(fs.readFileSync(`./Import/Cargo/${answers.cargos}`));
 
 			GenerateCargo(details, false);
+			console.log('\n');
+			ActionPrompt();
 		}catch(e)
 		{
 			console.log('Error loading the cargo')
