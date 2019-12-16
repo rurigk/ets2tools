@@ -48,7 +48,7 @@ function SelectProfile(profiles)
 			name: 'profile',
 			message: 'Select a profile',
 			choices: profiles,
-			pageSize: 30
+			pageSize: 25
 		}
 	])
 	.then(answers => {
@@ -78,7 +78,7 @@ function SelectSave(savesPath)
 			name: 'save',
 			message: 'Select a save',
 			choices: saves,
-			pageSize: 30
+			pageSize: 25
 		}
 	])
 	.then(answers => {
@@ -141,7 +141,7 @@ function ActionPrompt()
 				//'Export GPS',
 				//'Import GPS'
 			],
-			pageSize: 30
+			pageSize: 25
 		}
 	])
 	.then(answers => {
@@ -209,6 +209,7 @@ function ChangeAssignedTrailerRoutine()
 	if(currentTrailer == null)
 	{
 		console.log('No trailer attached');
+		WaitAndDie();
 		return;
 	}
 	var playerTrailers = SiiNunit.player[player]['trailers'];
@@ -222,14 +223,15 @@ function ChangeAssignedTrailerRoutine()
 			name: 'trailer',
 			message: 'Select trailer',
 			choices: trailers,
-			pageSize: 30
+			pageSize: 25
 		}
 	])
 	.then(answers => {
 		SiiNunit.player[player]['assigned_trailer'] = new SiiParser.Token(answers.trailer);
 		var serialized = SiiParser.Sii.Serialize(SiiNunit);
 		fs.writeFileSync(status.savePath, serialized);
-
+		console.log('Done!');
+		WaitAndDie();
 		//fs.writeFileSync('capture.json', JSON.stringify(SiiNunit));
 	});	
 }
@@ -257,6 +259,8 @@ function GenerateCargoRoutine()
 						RequestRawList('Select trailer', cargos[cargo], (trailer) => {
 							cargoDetails.trailer = trailer;
 							GenerateCargo(cargoDetails, true);
+							console.log('Done!');
+							WaitAndDie();
 						})
 					})
 				})
@@ -273,12 +277,14 @@ function GenerateCargo(details, exportsave)
 	if(typeof cityCompany == 'undefined')
 	{
 		console.log('City not discovered');
+		WaitAndDie();
 		return;
 	}
 
 	if(cityCompany.job_offer.length == 0)
 	{
 		console.log('The company has no jobs to replace');
+		WaitAndDie();
 		return;
 	}
 
@@ -350,6 +356,7 @@ function ImportCargoRoutine()
 	if(cargos.length == 0)
 	{
 		console.log("No files to import");
+		WaitAndDie();
 		return;
 	}
 	inquirer.prompt([
@@ -358,7 +365,7 @@ function ImportCargoRoutine()
 			name: 'cargos',
 			message: 'Select a file to import',
 			choices: cargos,
-			pageSize: 30
+			pageSize: 25
 		}
 	])
 	.then(answers => {
@@ -366,6 +373,8 @@ function ImportCargoRoutine()
 			let details = JSON.parse(fs.readFileSync(`./Import/Cargo/${answers.cargos}`));
 
 			GenerateCargo(details, false);
+			console.log('Done!');
+			WaitAndDie();
 		}catch(e)
 		{
 			console.log('Error loading the cargo')
@@ -402,6 +411,8 @@ function ExportGPSRoutine()
 
 	var d = new Date();
 	fs.writeFileSync(`./Export/GPS/gps_${d.getDate()}-${d.getMonth()}-${d.getFullYear()}_${d.getTime()}.json`, JSON.stringify(gps));
+	console.log('Done!');
+	WaitAndDie();
 }
 
 function ImportGPSRoutine()
@@ -416,6 +427,7 @@ function ImportGPSRoutine()
 	if(gps.length == 0)
 	{
 		console.log("No files to import");
+		WaitAndDie();
 		return;
 	}
 	inquirer.prompt([
@@ -424,7 +436,7 @@ function ImportGPSRoutine()
 			name: 'gps',
 			message: 'Select a file to import',
 			choices: gps,
-			pageSize: 30
+			pageSize: 25
 		}
 	])
 	.then(answers => {
@@ -458,9 +470,12 @@ function ImportGPSRoutine()
 
 			var serialized = SiiParser.Sii.Serialize(SiiNunit);
 			fs.writeFileSync(status.savePath, serialized);
+			console.log('Done!');
+			WaitAndDie();
 		}catch(e)
 		{
-			console.log('Error loading the gps file')
+			console.log('Error loading the gps file');
+			WaitAndDie();
 		}
 	});
 }
@@ -494,12 +509,17 @@ function RequestRawList(dialog, list, callback)
 			name: 'value',
 			message: dialog,
 			choices: list,
-			pageSize: 30
+			pageSize: 25
 		}
 	])
 	.then(answers => {
 		callback(answers.value);
 	});
+}
+
+function WaitAndDie()
+{
+	setTimeout(() =>{}, 3000)
 }
 
 GetProfiles();
