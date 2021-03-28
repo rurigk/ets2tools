@@ -95,9 +95,9 @@ function LoadSaveSubroutine(savePath)
 		var siiString = fs.readFileSync(savePath).toString();
 
 		if(siiString.slice(0, 8) != 'SiiNunit'){
-			exec(`SII_Decrypt2.exe "${savePath}"`, (error, stdout, stderr) => {
+			exec(`SII_Decrypt.exe "${savePath}"`, (error, stdout, stderr) => {
 				if (error) {
-					console.error(`SII_Decrypt2.exe missing`);
+					console.error(`SII_Decrypt.exe missing`, error);
 					return;
 				}
 
@@ -137,9 +137,9 @@ function ActionPrompt()
 			choices: [
 				'Change assigned trailer',
 				'Generate cargo',
-				'Import cargo'
-				//'Export GPS',
-				//'Import GPS'
+				'Import cargo',
+				'Export GPS',
+				'Import GPS'
 			],
 			pageSize: 25
 		}
@@ -468,6 +468,9 @@ function ImportGPSRoutine()
 				SiiNunit.__order.push(['gps_waypoint_storage', nameless]);
 			}
 
+			var registryNameless = Object.keys(SiiNunit.registry)[0];
+			SiiNunit.registry[registryNameless].data[0] = BigInt(5);
+
 			var serialized = SiiParser.Sii.Serialize(SiiNunit);
 			fs.writeFileSync(status.savePath, serialized);
 			console.log('Done!');
@@ -519,7 +522,7 @@ function RequestRawList(dialog, list, callback)
 
 function WaitAndDie()
 {
-	setTimeout(() =>{}, 3000)
+	setTimeout(() =>{}, 1000)
 }
 
 GetProfiles();

@@ -139,6 +139,18 @@ class Token {
 	}
 }
 
+class Pair {
+	constructor(x, y)
+	{
+		this.x = x;
+		this.y = y;
+	}
+	toString()
+	{
+		return `(${this.x}, ${this.y})`;
+	}
+}
+
 class Set {
 	constructor(x, y, z)
 	{
@@ -269,8 +281,11 @@ function GetValue(segment, key){
 	let regexSegmentTokenTest = /([a-zA-Z0-9_&][a-zA-Z0-9_.]+)/;
 	let regexSegmentToken =     /([a-zA-Z0-9_&][a-zA-Z0-9_.]+)/gm;
 
-	let regexSegmentSetTest = /\((-?[a-zA-Z0-9&]+)\s*,\s?(-?[a-zA-Z0-9&]+)\s*,\s*(-?[a-zA-Z0-9&]+)\)\s*$/;
-	let regexSegmentSet =     /\((-?[a-zA-Z0-9&]+)\s*,\s?(-?[a-zA-Z0-9&]+)\s*,\s*(-?[a-zA-Z0-9&]+)\)\s*$/gm;
+	let regexSegmentPairTest = /\((-?[a-zA-Z0-9&]+)\s*,\s?(-?[a-zA-Z0-9&]+)\s*\)\s*$/;
+	let regexSegmentPair =     /\((-?[a-zA-Z0-9&]+)\s*,\s?(-?[a-zA-Z0-9&]+)\s*\)\s*$/gm;
+
+	let regexSegmentSetTest =  /\((-?[a-zA-Z0-9&]+)\s*,\s?(-?[a-zA-Z0-9&]+)\s*,\s*(-?[a-zA-Z0-9&]+)\)\s*$/;
+	let regexSegmentSet =      /\((-?[a-zA-Z0-9&]+)\s*,\s?(-?[a-zA-Z0-9&]+)\s*,\s*(-?[a-zA-Z0-9&]+)\)\s*$/gm;
 
 	let regexSegmentVec4Test = /^\s*\((-?[a-zA-Z0-9&]+);?\s?(-?[a-zA-Z0-9&]+?\s?),?\s?(-?[a-zA-Z0-9&]+\s?),?\s?(-?[a-zA-Z0-9&]+\s?)\)\s*$/;
 	let regexSegmentVec4Set =  /^\s*\((-?[a-zA-Z0-9&]+);?\s?(-?[a-zA-Z0-9&]+?\s?),?\s?(-?[a-zA-Z0-9&]+\s?),?\s?(-?[a-zA-Z0-9&]+\s?)\)\s*$/gm;
@@ -287,6 +302,17 @@ function GetValue(segment, key){
 				regexSegmentNumber.lastIndex++;
 			}
 			return BigInt(m[1]);
+		}
+	}
+	else if(regexSegmentPairTest.test(segment))
+	{
+		let m;
+		while ((m = regexSegmentPair.exec(segment)) !== null) {
+			// This is necessary to avoid infinite loops with zero-width matches
+			if (m.index === regexSegmentPair.lastIndex) {
+				regexSegmentPair.lastIndex++;
+			}
+			return new Pair(m[1], m[2]);
 		}
 	}
 	else if(regexSegmentSetTest.test(segment))
