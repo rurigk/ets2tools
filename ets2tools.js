@@ -123,9 +123,10 @@ function LoadSaveSubroutine(savePath)
 		var siiString = fs.readFileSync(savePath).toString();
 
 		if(siiString.slice(0, 8) != 'SiiNunit'){
-			exec(`bin/SII_Decrypt.exe "${savePath}"`, (error, stdout, stderr) => {
+			exec(`"bin/SII_Decrypt.exe" "${savePath}"`, (error, stdout, stderr) => {
 				if (error) {
 					console.error(`bin/SII_Decrypt.exe missing`, error);
+					WaitAndDie();
 					return;
 				}
 
@@ -672,7 +673,7 @@ function RequestNumber(dialog, signed, callback)
 
 function WaitAndDie()
 {
-	setTimeout(() =>{}, 1000)
+	setTimeout(() =>{}, 4000)
 }
 
 GetProfiles();

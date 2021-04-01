@@ -1,8 +1,8 @@
 {
-  "name": "ets2utils",
+  "name": "ets2tools",
   "version": "1.0.0",
   "description": "Euro truck simulator 2 tools",
-  "main": "parser.js",
+  "main": "ets2tools.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,5 +19,12 @@
   },
   "devDependencies": {
     "pkg": "^4.4.0"
-  }
+  },
+  "pkg": { 
+    "assets": [
+      "node_modules/platform-folders/build/Release/platformFolders.node"
+    ],
+    "targets": [ "node12-win-x64" ]
+  },
+  "bin": "ets2tools.js"
 }
