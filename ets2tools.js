@@ -29,14 +29,42 @@ var trailerVariants = JSON.parse(fs.readFileSync('./Data/TrailerVariants.json').
 var cityTargets = JSON.parse(fs.readFileSync('./Data/CityTargets.json').toString());
 
 const docsDir = platformFolders.getDocumentsFolder();
-const profilesPath = path.join(docsDir, 'Euro Truck Simulator 2', 'profiles');
+
+var profilesPath = "";
+
 function GetProfiles(){
-	try{
-		SelectProfile(profilesPath);
-	}catch(e)
-	{
-		console.log('No profiles founded');
-	}
+	inquirer.prompt([
+		{
+			type: 'list',
+			name: 'game',
+			message: 'Select game',
+			choices: [
+				'Euro Truck Simulator 2',
+				'American Truck Simulator (Experimental, Backup your save game before use)',
+			],
+			pageSize: 25
+		}
+	])
+	.then(answers => {
+		switch(answers.game)
+		{
+			case 'Euro Truck Simulator 2':
+				profilesPath = path.join(docsDir, 'Euro Truck Simulator 2', 'profiles');
+				break;
+			case 'American Truck Simulator (Experimental, Backup your save game before use)':
+				profilesPath = path.join(docsDir, 'American Truck Simulator', 'profiles');
+				break;
+			default:
+				profilesPath = path.join(docsDir, 'Euro Truck Simulator 2', 'profiles');
+				return;
+		}
+		try{
+			SelectProfile(profilesPath);
+		}catch(e)
+		{
+			console.log('No profiles founded');
+		}
+	});
 }
 
 function SelectProfile(profiles)
@@ -136,6 +164,7 @@ function ActionPrompt()
 			message: 'What do you want to do?',
 			choices: [
 				'Change assigned trailer',
+				'Change assigned trailer weight',
 				'Generate cargo',
 				'Import cargo',
 				'Export GPS',
@@ -149,6 +178,9 @@ function ActionPrompt()
 		{
 			case 'Change assigned trailer':
 				ChangeAssignedTrailerRoutine();
+				break;
+			case 'Change assigned trailer weight':
+				ChangeAssignedTrailerWeightRoutine();
 				break;
 			case 'Generate cargo':
 				GenerateCargoRoutine();
@@ -209,11 +241,13 @@ function ChangeAssignedTrailerRoutine()
 	if(currentTrailer == null)
 	{
 		console.log('No trailer attached');
-		WaitAndDie();
+		setTimeout(() => {
+			ActionPrompt();
+		}, 1500);
 		return;
 	}
 	var playerTrailers = SiiNunit.player[player]['trailers'];
-	var trailers = [];
+	var trailers = ['<- Back'];
 	for (let i = 0; i < playerTrailers.length; i++) {
 		trailers.push(playerTrailers[i].toString());
 	}
@@ -227,12 +261,79 @@ function ChangeAssignedTrailerRoutine()
 		}
 	])
 	.then(answers => {
+		if(answers.trailer == '<- Back')
+		{
+			ActionPrompt();
+			return;
+		}
 		SiiNunit.player[player]['assigned_trailer'] = new SiiParser.Token(answers.trailer);
 		var serialized = SiiParser.Sii.Serialize(SiiNunit);
 		fs.writeFileSync(status.savePath, serialized);
 		console.log('Done!');
-		WaitAndDie();
+		setTimeout(() => {
+			ActionPrompt();
+		}, 1500);
 		//fs.writeFileSync('capture.json', JSON.stringify(SiiNunit));
+	});	
+}
+
+function ChangeAssignedTrailerWeightRoutine()
+{
+
+	var player = Object.keys(SiiNunit.player)[0];
+	var currentTrailer = SiiNunit.player[player]['assigned_trailer'];
+
+	if(currentTrailer == null)
+	{
+		console.log('No trailer attached');
+		setTimeout(() => {
+			ActionPrompt();
+		}, 1500);
+		return;
+	}
+
+	inquirer.prompt([
+		{
+			type: 'number',
+			name: 'weight',
+			message: 'Enter weight (t): ',
+			default: 0
+		}
+	])
+	.then(answers => {
+		if(!Number.isNaN(answers.weight))
+		{
+			if(answers.weight >= 0)
+			{
+				if(typeof SiiNunit.trailer[currentTrailer] != "undefined" )
+				{
+					SiiNunit.trailer[currentTrailer].cargo_mass = BigInt(answers.weight * 1000);
+				}
+				
+				var serialized = SiiParser.Sii.Serialize(SiiNunit);
+				fs.writeFileSync(status.savePath, serialized);
+				
+				console.log('Done!');
+				setTimeout(() => {
+					ActionPrompt();
+				}, 1500);
+			}
+			else
+			{
+				console.log('Invalid weight: Only positive values');
+				setTimeout(() => {
+					ActionPrompt();
+				}, 1500);
+			}
+		}
+		else
+		{
+			console.log('Invalid weight: Not a number');
+			setTimeout(() => {
+				ActionPrompt();
+			}, 1500);
+			return;
+		}
 	});	
 }
 
@@ -244,7 +345,8 @@ function GenerateCargoRoutine()
 		origin_company: '',
 		target_company: '',
 		cargo: '',
-		trailer: ''
+		trailer: '',
+		units_count: 1
 	}
 	RequestRawList('Select origin city', Object.keys(cityCompany), (origin_city) => {
 		cargoDetails.origin_city = origin_city;
@@ -257,10 +359,15 @@ function GenerateCargoRoutine()
 					RequestRawList('Select cargo', Object.keys(cargos), (cargo) => {
 						cargoDetails.cargo = cargo;
 						RequestRawList('Select trailer', cargos[cargo], (trailer) => {
-							cargoDetails.trailer = trailer;
-							GenerateCargo(cargoDetails, true);
-							console.log('Done!');
-							WaitAndDie();
+							RequestNumber('Enter units count: ', true, (units_count) => {
+								cargoDetails.trailer = trailer;
+								cargoDetails.units_count = units_count;
+								GenerateCargo(cargoDetails, true);
+								console.log('Done!');
+								setTimeout(() => {
+									ActionPrompt();
+								}, 1500);
+							})
 						})
 					})
 				})
@@ -277,14 +384,18 @@ function GenerateCargo(details, exportsave)
 	if(typeof cityCompany == 'undefined')
 	{
 		console.log('City not discovered');
-		WaitAndDie();
+		setTimeout(() => {
+			ActionPrompt();
+		}, 1500);
 		return;
 	}
 
 	if(cityCompany.job_offer.length == 0)
 	{
 		console.log('The company has no jobs to replace');
-		WaitAndDie();
+		setTimeout(() => {
+			ActionPrompt();
+		}, 1500);
 		return;
 	}
 
@@ -298,7 +409,7 @@ function GenerateCargo(details, exportsave)
 	SiiNunit.job_offer_data[offerToken].trailer_variant = new SiiParser.Token(trailerVariants[details.trailer][0]);
 	SiiNunit.job_offer_data[offerToken].urgency = 0;
 	SiiNunit.job_offer_data[offerToken].expiration_time = gameTime + 5000n;
-	SiiNunit.job_offer_data[offerToken].units_count = 33;
+	SiiNunit.job_offer_data[offerToken].units_count = details.units_count;
 	SiiNunit.job_offer_data[offerToken].shortest_distance_km = 0;
 	SiiNunit.job_offer_data[offerToken].ferry_price = 0;
 	SiiNunit.job_offer_data[offerToken].ferry_time = 0;
@@ -356,7 +467,9 @@ function ImportCargoRoutine()
 	if(cargos.length == 0)
 	{
 		console.log("No files to import");
-		WaitAndDie();
+		setTimeout(() => {
+			ActionPrompt();
+		}, 1500);
 		return;
 	}
 	inquirer.prompt([
@@ -374,7 +487,9 @@ function ImportCargoRoutine()
 
 			GenerateCargo(details, false);
 			console.log('Done!');
-			WaitAndDie();
+			setTimeout(() => {
+				ActionPrompt();
+			}, 1500);
 		}catch(e)
 		{
 			console.log('Error loading the cargo')
@@ -412,7 +527,9 @@ function ExportGPSRoutine()
 	var d = new Date();
 	fs.writeFileSync(`./Export/GPS/gps_${d.getDate()}-${d.getMonth()}-${d.getFullYear()}_${d.getTime()}.json`, JSON.stringify(gps));
 	console.log('Done!');
-	WaitAndDie();
+	setTimeout(() => {
+		ActionPrompt();
+	}, 1500);
 }
 
 function ImportGPSRoutine()
@@ -427,7 +544,9 @@ function ImportGPSRoutine()
 	if(gps.length == 0)
 	{
 		console.log("No files to import");
-		WaitAndDie();
+		setTimeout(() => {
+			ActionPrompt();
+		}, 1500);
 		return;
 	}
 	inquirer.prompt([
@@ -474,11 +593,15 @@ function ImportGPSRoutine()
 			var serialized = SiiParser.Sii.Serialize(SiiNunit);
 			fs.writeFileSync(status.savePath, serialized);
 			console.log('Done!');
-			WaitAndDie();
+			setTimeout(() => {
+				ActionPrompt();
+			}, 1500);
 		}catch(e)
 		{
 			console.log('Error loading the gps file');
-			WaitAndDie();
+			setTimeout(() => {
+				ActionPrompt();
+			}, 1500);
 		}
 	});
 }
@@ -516,6 +639,33 @@ function RequestRawList(dialog, list, callback)
 		}
 	])
 	.then(answers => {
+		callback(answers.value);
+	});
+}
+
+function RequestNumber(dialog, signed, callback)
+{
+	inquirer.prompt([
+		{
+			type: 'number',
+			name: 'value',
+			message: dialog,
+			pageSize: 25
+		}
+	])
+	.then(answers => {
+		if(Number.isNaN(answers.value))
+		{
+			console.log('Please enter a valid number')
+			RequestNumber(dialog, callback);
+			return;
+		}
+		if(signed && answers.value < 0)
+		{
+			console.log('Please enter a positive number')
+			RequestNumber(dialog, callback);
+			return;
+		}
 		callback(answers.value);
 	});
 }
